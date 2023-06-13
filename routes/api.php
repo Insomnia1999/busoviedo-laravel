@@ -21,7 +21,8 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 Route::get("/lines", 'App\Http\Controllers\LineController@all');
 Route::get("/stops", 'App\Http\Controllers\StopController@all');
-Route::prefix("stops")->group(function() {
+Route::get('/routes/{id}', [RoutesController::class, 'index']);
+Route::prefix("routes")->group(function() {
     Route::get("/a1", 'App\Http\Controllers\StopController@a1');
     Route::get("/a2", 'App\Http\Controllers\StopController@a2');
     Route::get("/b1", 'App\Http\Controllers\StopController@b1');
