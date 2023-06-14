@@ -10,7 +10,7 @@ class RoutesController extends Controller
     function index(String $id) {
         $lines = Route::orderBy('id')->get();
 
-        if($lines->count()) {
+        if($lines->count() > 0) {
             return response()->json(['status' => true, 'data' => $lines], 200);
         } else {
             return response()->json(['status' => false], 400);

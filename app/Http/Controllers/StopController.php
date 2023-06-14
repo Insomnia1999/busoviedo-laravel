@@ -43,7 +43,7 @@ class StopController extends Controller
     function all() {
         $stops = Stop::orderBy('id')->get();
 
-        if($stops->count()) {
+        if($stops->count() > 0) {
             return response()->json(['status' => true, 'data' => $stops], 200);
         } else {
             return response()->json(['status' => false], 400);
@@ -53,7 +53,7 @@ class StopController extends Controller
     function a1() {
         $stops = A1::orderBy('Orden')->get();
 
-        if($stops->count()) {
+        if($stops->count() > 0) {
             return response()->json(['status' => true, 'data' => $stops], 200);
         } else {
             return response()->json(['status' => false], 400);
@@ -63,7 +63,7 @@ class StopController extends Controller
     function a2() {
         $stops = A2::orderBy('Orden')->get();
 
-        if($stops->count()) {
+        if($stops->count() > 0) {
             return response()->json(['status' => true, 'data' => $stops], 200);
         } else {
             return response()->json(['status' => false], 400);
@@ -73,7 +73,7 @@ class StopController extends Controller
     function b1() {
         $stops = B1::orderBy('Orden')->get();
 
-        if($stops->count()) {
+        if($stops->count() > 0) {
             return response()->json(['status' => true, 'data' => $stops], 200);
         } else {
             return response()->json(['status' => false], 400);
@@ -83,7 +83,7 @@ class StopController extends Controller
     function b2() {
         $stops = B2::orderBy('Orden')->get();
 
-        if($stops->count()) {
+        if($stops->count() > 0) {
             return response()->json(['status' => true, 'data' => $stops], 200);
         } else {
             return response()->json(['status' => false], 400);
@@ -93,7 +93,7 @@ class StopController extends Controller
     function c1() {
         $stops = C1::orderBy('Orden')->get();
 
-        if($stops->count()) {
+        if($stops->count() > 0) {
             return response()->json(['status' => true, 'data' => $stops], 200);
         } else {
             return response()->json(['status' => false], 400);
@@ -103,7 +103,7 @@ class StopController extends Controller
     function c2() {
         $stops = C2::orderBy('Orden')->get();
 
-        if($stops->count()) {
+        if($stops->count() > 0) {
             return response()->json(['status' => true, 'data' => $stops], 200);
         } else {
             return response()->json(['status' => false], 400);
@@ -113,7 +113,7 @@ class StopController extends Controller
     function d1() {
         $stops = D1::orderBy('Orden')->get();
 
-        if($stops->count()) {
+        if($stops->count() > 0) {
             return response()->json(['status' => true, 'data' => $stops], 200);
         } else {
             return response()->json(['status' => false], 400);
@@ -123,7 +123,7 @@ class StopController extends Controller
     function d2() {
         $stops = D2::orderBy('Orden')->get();
 
-        if($stops->count()) {
+        if($stops->count() > 0) {
             return response()->json(['status' => true, 'data' => $stops], 200);
         } else {
             return response()->json(['status' => false], 400);
@@ -133,7 +133,7 @@ class StopController extends Controller
     function e1() {
         $stops = E1::orderBy('Orden')->get();
 
-        if($stops->count()) {
+        if($stops->count() > 0) {
             return response()->json(['status' => true, 'data' => $stops], 200);
         } else {
             return response()->json(['status' => false], 400);
@@ -143,7 +143,7 @@ class StopController extends Controller
     function e2() {
         $stops = E2::orderBy('Orden')->get();
 
-        if($stops->count()) {
+        if($stops->count() > 0) {
             return response()->json(['status' => true, 'data' => $stops], 200);
         } else {
             return response()->json(['status' => false], 400);
@@ -153,7 +153,7 @@ class StopController extends Controller
     function f1() {
         $stops = F1::orderBy('Orden')->get();
 
-        if($stops->count()) {
+        if($stops->count() > 0) {
             return response()->json(['status' => true, 'data' => $stops], 200);
         } else {
             return response()->json(['status' => false], 400);
@@ -163,7 +163,7 @@ class StopController extends Controller
     function f2() {
         $stops = F2::orderBy('Orden')->get();
 
-        if($stops->count()) {
+        if($stops->count() > 0) {
             return response()->json(['status' => true, 'data' => $stops], 200);
         } else {
             return response()->json(['status' => false], 400);
@@ -173,7 +173,7 @@ class StopController extends Controller
     function g1() {
         $stops = G1::orderBy('Orden')->get();
 
-        if($stops->count()) {
+        if($stops->count() > 0) {
             return response()->json(['status' => true, 'data' => $stops], 200);
         } else {
             return response()->json(['status' => false], 400);
@@ -183,7 +183,7 @@ class StopController extends Controller
     function g2() {
         $stops = G2::orderBy('Orden')->get();
 
-        if($stops->count()) {
+        if($stops->count() > 0) {
             return response()->json(['status' => true, 'data' => $stops], 200);
         } else {
             return response()->json(['status' => false], 400);
@@ -193,7 +193,7 @@ class StopController extends Controller
     function h1() {
         $stops = H1::orderBy('Orden')->get();
 
-        if($stops->count()) {
+        if($stops->count() > 0) {
             return response()->json(['status' => true, 'data' => $stops], 200);
         } else {
             return response()->json(['status' => false], 400);
@@ -203,7 +203,7 @@ class StopController extends Controller
     function h2() {
         $stops = H2::orderBy('Orden')->get();
 
-        if($stops->count()) {
+        if($stops->count() > 0) {
             return response()->json(['status' => true, 'data' => $stops], 200);
         } else {
             return response()->json(['status' => false], 400);
@@ -213,7 +213,7 @@ class StopController extends Controller
     function j1() {
         $stops = J1::orderBy('Orden')->get();
 
-        if($stops->count()) {
+        if($stops->count() > 0) {
             return response()->json(['status' => true, 'data' => $stops], 200);
         } else {
             return response()->json(['status' => false], 400);
@@ -223,7 +223,7 @@ class StopController extends Controller
     function j2() {
         $stops = J2::orderBy('Orden')->get();
 
-        if($stops->count()) {
+        if($stops->count() > 0) {
             return response()->json(['status' => true, 'data' => $stops], 200);
         } else {
             return response()->json(['status' => false], 400);
@@ -233,7 +233,7 @@ class StopController extends Controller
     function k1() {
         $stops = K1::orderBy('Orden')->get();
 
-        if($stops->count()) {
+        if($stops->count() > 0) {
             return response()->json(['status' => true, 'data' => $stops], 200);
         } else {
             return response()->json(['status' => false], 400);
@@ -243,7 +243,7 @@ class StopController extends Controller
     function k2() {
         $stops = K2::orderBy('Orden')->get();
 
-        if($stops->count()) {
+        if($stops->count() > 0) {
             return response()->json(['status' => true, 'data' => $stops], 200);
         } else {
             return response()->json(['status' => false], 400);
@@ -253,7 +253,7 @@ class StopController extends Controller
     function L1() {
         $stops = L1::orderBy('Orden')->get();
 
-        if($stops->count()) {
+        if($stops->count() > 0) {
             return response()->json(['status' => true, 'data' => $stops], 200);
         } else {
             return response()->json(['status' => false], 400);
@@ -263,7 +263,7 @@ class StopController extends Controller
     function L2() {
         $stops = L2::orderBy('Orden')->get();
 
-        if($stops->count()) {
+        if($stops->count() > 0) {
             return response()->json(['status' => true, 'data' => $stops], 200);
         } else {
             return response()->json(['status' => false], 400);
@@ -273,7 +273,7 @@ class StopController extends Controller
     function m() {
         $stops = M::orderBy('Orden')->get();
 
-        if($stops->count()) {
+        if($stops->count() > 0) {
             return response()->json(['status' => true, 'data' => $stops], 200);
         } else {
             return response()->json(['status' => false], 400);
@@ -283,7 +283,7 @@ class StopController extends Controller
     function n1() {
         $stops = N1::orderBy('Orden')->get();
 
-        if($stops->count()) {
+        if($stops->count() > 0) {
             return response()->json(['status' => true, 'data' => $stops], 200);
         } else {
             return response()->json(['status' => false], 400);
@@ -293,7 +293,7 @@ class StopController extends Controller
     function n2() {
         $stops = N2::orderBy('Orden')->get();
 
-        if($stops->count()) {
+        if($stops->count() > 0) {
             return response()->json(['status' => true, 'data' => $stops], 200);
         } else {
             return response()->json(['status' => false], 400);
@@ -303,7 +303,7 @@ class StopController extends Controller
     function o1() {
         $stops = O1::orderBy('Orden')->get();
 
-        if($stops->count()) {
+        if($stops->count() > 0) {
             return response()->json(['status' => true, 'data' => $stops], 200);
         } else {
             return response()->json(['status' => false], 400);
@@ -313,7 +313,7 @@ class StopController extends Controller
     function o2() {
         $stops = O2::orderBy('Orden')->get();
 
-        if($stops->count()) {
+        if($stops->count() > 0) {
             return response()->json(['status' => true, 'data' => $stops], 200);
         } else {
             return response()->json(['status' => false], 400);
@@ -323,7 +323,7 @@ class StopController extends Controller
     function u1() {
         $stops = U1::orderBy('Orden')->get();
 
-        if($stops->count()) {
+        if($stops->count() > 0) {
             return response()->json(['status' => true, 'data' => $stops], 200);
         } else {
             return response()->json(['status' => false], 400);
@@ -333,7 +333,7 @@ class StopController extends Controller
     function u2() {
         $stops = U2::orderBy('Orden')->get();
 
-        if($stops->count()) {
+        if($stops->count() > 0) {
             return response()->json(['status' => true, 'data' => $stops], 200);
         } else {
             return response()->json(['status' => false], 400);
@@ -343,7 +343,7 @@ class StopController extends Controller
     function v1() {
         $stops = V1::orderBy('Orden')->get();
 
-        if($stops->count()) {
+        if($stops->count() > 0) {
             return response()->json(['status' => true, 'data' => $stops], 200);
         } else {
             return response()->json(['status' => false], 400);
@@ -353,7 +353,7 @@ class StopController extends Controller
     function v2() {
         $stops = V2::orderBy('Orden')->get();
 
-        if($stops->count()) {
+        if($stops->count() > 0) {
             return response()->json(['status' => true, 'data' => $stops], 200);
         } else {
             return response()->json(['status' => false], 400);
