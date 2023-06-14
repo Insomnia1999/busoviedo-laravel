@@ -8,7 +8,7 @@ use Illuminate\Http\Request;
 class RoutesController extends Controller
 {
     function index(String $id) {
-        $lines = Route::orderBy('id')->get();
+        $lines = Route::where('line', $id)->orderBy('id')->get();
 
         if($lines->count() > 0) {
             return response()->json(['status' => true, 'data' => $lines], 200);
