@@ -23,6 +23,9 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 Route::get("/lines", 'App\Http\Controllers\LineController@all');
 Route::get("/stops", 'App\Http\Controllers\StopController@all');
 Route::get('/routes/{id}', [RoutesController::class, 'index']);
+Route::get('/version', function () {
+    return response()->json(["version" => "1.0"], 200);
+});
 Route::prefix("stops")->group(function() {
     Route::get("/a1", 'App\Http\Controllers\StopController@a1');
     Route::get("/a2", 'App\Http\Controllers\StopController@a2');
