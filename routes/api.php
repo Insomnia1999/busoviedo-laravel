@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Middleware\ApiMiddleware;
 use App\Models\Stop;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
@@ -15,10 +16,6 @@ use App\Http\Controllers\RoutesController;
 | be assigned to the "api" middleware group. Make something great!
 |
 */
-
-Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
-    return $request->user();
-});
 
 Route::get("/lines", 'App\Http\Controllers\LineController@all');
 Route::get("/stops", 'App\Http\Controllers\StopController@all');
@@ -60,3 +57,12 @@ Route::prefix("stops")->group(function() {
     Route::get("/v2", 'App\Http\Controllers\StopController@v2');
 });
 
+Route::middleware(ApiMiddleware::class)->prefix("gifts")->group(function() {
+    Route::get('/version', function () {
+        return response()->json(["version" => "1.0"], 200);
+    });
+
+    Route::get("/", 'App\Http\Controllers\GiftsController@all');
+
+
+});
