@@ -2,9 +2,6 @@
 namespace App\Http\Controllers;
 
 use App\Models\Gift;
-use App\Models\Line;
-use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Log;
 
 class GiftsController extends Controller
 {

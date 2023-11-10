@@ -16,14 +16,16 @@ use App\Http\Controllers\RoutesController;
 | be assigned to the "api" middleware group. Make something great!
 |
 */
-
-Route::get("/lines", 'App\Http\Controllers\LineController@all');
-Route::get("/stops", 'App\Http\Controllers\StopController@all');
-Route::get('/routes/{id}', [RoutesController::class, 'index']);
-Route::get('/version', function () {
-    return response()->json(["version" => "1.0"], 200);
+Route::middleware(ApiMiddleware::class)->prefix("/")->group(function() {
+    Route::get("/lines", 'App\Http\Controllers\LineController@all');
+    Route::get("/stops", 'App\Http\Controllers\StopController@all');
+    Route::get('/routes/{id}', [RoutesController::class, 'index']);
+    Route::get('/version', function () {
+        return response()->json(["version" => "1.0"], 200);
+    });
 });
-Route::prefix("stops")->group(function() {
+
+Route::middleware(ApiMiddleware::class)->prefix("stops")->group(function() {
     Route::get("/a1", 'App\Http\Controllers\StopController@a1');
     Route::get("/a2", 'App\Http\Controllers\StopController@a2');
     Route::get("/b1", 'App\Http\Controllers\StopController@b1');
@@ -58,11 +60,6 @@ Route::prefix("stops")->group(function() {
 });
 
 Route::middleware(ApiMiddleware::class)->prefix("gifts")->group(function() {
-    Route::get('/version', function () {
-        return response()->json(["version" => "1.0"], 200);
-    });
 
     Route::get("/", 'App\Http\Controllers\GiftsController@all');
-
-
 });
