@@ -12,26 +12,16 @@ class Route extends Model
     public $timestamps = false;
 
     protected $maps = [
-        "Nombre" => "name",
-        "N_paradas" => "stopsNumber",
-        "NombreLinea" => "lineName"
+        "nParadas" => "stopsNumber"
     ];
 
 
-    protected $appends = ["name", "stopsNumber", "lineName"];
-    protected $hidden = ["Nombre", "N_paradas", "NombreLinea"];
+    protected $appends = ["stopsNumber"];
+    protected $hidden = ["nParadas"];
 
-    public function getNameAttribute()
-    {
-        return $this->attributes['Nombre'];
-    }
+
     public function getStopsNumberAttribute()
     {
-        return $this->attributes['N_paradas'];
-    }
-
-    public function getLineNameAttribute()
-    {
-        return $this->attributes['NombreLinea'];
+        return $this->attributes['nParadas'];
     }
 }
